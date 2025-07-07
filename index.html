@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shailesh Sonare - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Custom Parallax and Animations */
         .parallax {
@@ -26,7 +26,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Background Animation */
+        /* Dynamic Background Animation */
         body {
             position: relative;
             overflow-x: hidden;
@@ -38,39 +38,75 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #1e3a8a, #4c1d95, #1e3a8a);
-            background-size: 400%;
+            background: linear-gradient(45deg, #1e3a8a, #4c1d95, #7c3aed, #1e3a8a);
+            background-size: 600%;
+            opacity: 0.3;
+            z-index: -2;
+            animation: gradientWave 20s ease infinite;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10%);
+            background-size: 20px 20px;
             opacity: 0.2;
             z-index: -1;
-            animation: gradientWave 15s ease infinite;
+            animation: particleShift 30s linear infinite;
         }
         @keyframes gradientWave {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+        @keyframes particleShift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100px, -100px); }
+        }
         /* Social Media Button Animation */
         .social-link {
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
         }
         .social-link:hover {
             transform: scale(1.1);
-            background-color: #4f46e5;
         }
-        /* QR Code Styling */
+        /* QR Code and Icon Styling */
         .qr-code {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .qr-code div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
+            min-width: 120px;
         }
         .qr-code canvas {
             border: 5px solid #ffffff;
             border-radius: 8px;
             margin-bottom: 0.5rem;
+        }
+        .qr-code i {
+            font-size: 1.5rem;
+            color: #4f46e5;
+            margin-bottom: 0.5rem;
+        }
+        .qr-code p {
+            font-size: 0.9rem;
+            color: #d1d5db;
         }
         /* Smooth scrolling */
         html {
@@ -83,7 +119,7 @@
     <header class="parallax parallax-hero h-screen flex items-center justify-center">
         <div class="text-center bg-black bg-opacity-50 p-10 rounded-lg">
             <h1 class="text-5xl md:text-7xl font-bold mb-4">Shailesh Sonare</h1>
-            <p class="text-xl md:text-2xl mb-6">Project Manager | Full Stack Developer | Mentor</p>
+            <p class="text-xl md:text-2xl mb-6">Full Stack Developer | Mentor | Content Creator</p>
         </div>
     </header>
 
@@ -172,46 +208,53 @@
     <!-- Connect -->
     <section id="connect" class="py-20 bg-gray-800 section-slide-in">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-8 text-center"> Connect with Me</h2>
+            <h2 class="text-4xl font-bold mb-8 text-center">Connect with Me</h2>
             <div class="qr-code">
                 <div>
                     <a href="https://linkedin.com/in/shaileshsonare" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin text-2xl text-indigo-600"></i>
                         <canvas id="qr-linkedin"></canvas>
                         <p class="text-gray-300">LinkedIn</p>
                     </a>
                 </div>
                 <div>
                     <a href="https://github.com/shaileshsonareg" target="_blank" class="social-link">
+                        <i class="fab fa-github text-2xl text-indigo-600"></i>
                         <canvas id="qr-github"></canvas>
                         <p class="text-gray-300">GitHub</p>
                     </a>
                 </div>
                 <div>
                     <a href="https://www.youtube.com/@SHAILESHSONARE" target="_blank" class="social-link">
+                        <i class="fab fa-youtube text-2xl text-indigo-600"></i>
                         <canvas id="qr-youtube"></canvas>
                         <p class="text-gray-300">YouTube (Personal)</p>
                     </a>
                 </div>
                 <div>
-                    <a href="https://www.youtube.com/@Code InsightAcademy" target="_blank" class="social-link">
+                    <a href="https://www.youtube.com/@CodeInsightAcademy" target="_blank" class="social-link">
+                        <i class="fab fa-youtube text-2xl text-indigo-600"></i>
                         <canvas id="qr-codeinsight"></canvas>
-                        <p class="text-gray-300">CodeInsightAcademy (Tech Tutorials) </p>
+                        <p class="text-gray-300">CodeInsightAcademy <br />(Tech Tutorials)</p>
                     </a>
                 </div>
                 <div>
                     <a href="https://www.youtube.com/@ciadevlive" target="_blank" class="social-link">
+                        <i class="fab fa-youtube text-2xl text-indigo-600"></i>
                         <canvas id="qr-ciadevlive"></canvas>
-                        <p class="text-gray-300">CI Dev Live (Live Stream)</p>
+                        <p class="text-gray-300">CI Dev Live <br />(Live Stream)</p>
                     </a>
                 </div>
                 <div>
                     <a href="https://www.facebook.com/shaileshsonare" target="_blank" class="social-link">
+                        <i class="fab fa-facebook text-2xl text-indigo-600"></i>
                         <canvas id="qr-facebook"></canvas>
                         <p class="text-gray-300">Facebook</p>
                     </a>
                 </div>
                 <div>
                     <a href="https://www.instagram.com/shaileshsonare" target="_blank" class="social-link">
+                        <i class="fab fa-instagram text-2xl text-indigo-600"></i>
                         <canvas id="qr-instagram"></canvas>
                         <p class="text-gray-300">Instagram</p>
                     </a>
@@ -247,55 +290,19 @@
         sections.forEach(section => {
             observer.observe(section);
         });
-/*
+
         // QR Code Generation
-        new QRCode(document.getElementById("qr-linkedin"), {
-            text: "https://linkedin.com/in/shaileshsonare",
-            width: 100,
-            height: 100
-        });
-        new QRCode(document.getElementById("qr-github"), {
-            text: "https://github.com/shaileshsonareg",
-            width: 100,
-            height: 100
-        });
-        new QRCode(document.getElementById("qr-youtube"), {
-            text: "https://www.youtube.com/@SHAILESHSONARE",
-            width: 100,
-            height: 100
-        });
-        new QRCode(document.getElementById("qr-codeinsight"), {
-            text: "https://www.youtube.com/@CodeInsightAcademy",
-            width: 100,
-            height: 100
-        });
-        new QRCode(document.getElementById("qr-ciadevlive"), {
-            text: "https://www.youtube.com/@ciadevlive",
-            width: 100,
-            height: 100
-        });
-        new QRCode(document.getElementById("qr-facebook"), {
-            text: "https://www.facebook.com/shaileshsonare",
-            width: 100,
-            height: 100
-        });
-        new QRCode(document.getElementById("qr-instagram"), {
-            text: "https://www.instagram.com/shaileshsonare",
-            width: 100,
-            height: 100
-        });
-*/
         const qrLinks = {
-          'qr-linkedin': 'https://linkedin.com/in/shaileshsonare',
-          'qr-github': 'https://github.com/shaileshsonareg',
-          'qr-youtube': 'https://www.youtube.com/@SHAILESHSONARE',
-          'qr-facebook': 'https://www.facebook.com/shaileshsonare',
-          'qr-instagram': 'https://www.instagram.com/shaileshsonare',
-          'qr-codeinsight': 'https://www.youtube.com/@CodeInsightAcademy',
-          'qr-ciadevlive': 'https://www.youtube.com/@ciadevlive'
+            'qr-linkedin': 'https://linkedin.com/in/shaileshsonare',
+            'qr-github': 'https://github.com/shaileshsonareg',
+            'qr-youtube': 'https://www.youtube.com/@SHAILESHSONARE',
+            'qr-codeinsight': 'https://www.youtube.com/@CodeInsightAcademy',
+            'qr-ciadevlive': 'https://www.youtube.com/@ciadevlive',
+            'qr-facebook': 'https://www.facebook.com/shaileshsonare',
+            'qr-instagram': 'https://www.instagram.com/shaileshsonare'
         };
         Object.entries(qrLinks).forEach(([id, url]) => {
-          new QRious({ element: document.getElementById(id), value: url, size: 100 });
+            new QRious({ element: document.getElementById(id), value: url, size: 100 });
         });
     </script>
 </body>

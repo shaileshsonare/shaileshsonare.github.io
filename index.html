@@ -270,7 +270,7 @@
                     <a href="https://www.youtube.com/@ciadevlive" target="_blank" class="social-link">
                         <i class="fab fa-youtube text-2xl text-indigo-600"></i>
                         <canvas id="qr-ciadevlive"></canvas>
-                        <p class="text-gray-300">CI Dev Live <br />(Live Stream)</p>
+                        <p class="text-gray-300">CIA Dev Live <br />(Live Stream)</p>
                     </a>
                 </div>
                 <div>
@@ -284,7 +284,14 @@
                     <a href="https://www.instagram.com/shaileshsonare" target="_blank" class="social-link">
                         <i class="fab fa-instagram text-2xl text-indigo-600"></i>
                         <canvas id="qr-instagram"></canvas>
-                        <p class="text-gray-300">Instagram</p>
+                        <p class="text-gray-300">Instagram <br />(Personal)</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/shaileshsonare" target="_blank" class="social-link">
+                        <i class="fab fa-instagram text-2xl text-indigo-600"></i>
+                        <canvas id="qr-instagramcia"></canvas>
+                        <p class="text-gray-300">Instagram CIA</p>
                     </a>
                 </div>
             </div>
@@ -327,7 +334,8 @@
             'qr-codeinsight': 'https://www.youtube.com/@CodeInsightAcademy',
             'qr-ciadevlive': 'https://www.youtube.com/@ciadevlive',
             'qr-facebook': 'https://www.facebook.com/shaileshsonare',
-            'qr-instagram': 'https://www.instagram.com/shaileshsonare'
+            'qr-instagram': 'https://www.instagram.com/shaileshsonare',
+            'qr-instagramcia': 'https://www.instagram.com/codeinsightacademy'
         };
         Object.entries(qrLinks).forEach(([id, url]) => {
             new QRious({ element: document.getElementById(id), value: url, size: 100 });

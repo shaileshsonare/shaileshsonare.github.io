@@ -305,6 +305,13 @@
                         <p class="text-gray-300">Instagram CIA</p>
                     </a>
                 </div>
+                <div>
+                    <a href="https://codeinsightacademy.com/blog/" target="_blank" class="social-link">
+                        <i class="fas fa-blog text-2xl text-indigo-600"></i>
+                        <canvas id="qr-blog"></canvas>
+                        <p class="text-gray-300">Tech Blog</p>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -346,7 +353,8 @@
             'qr-ciadevlive': 'https://www.youtube.com/@ciadevlive',
             'qr-facebook': 'https://www.facebook.com/shaileshsonare',
             'qr-instagram': 'https://www.instagram.com/shaileshsonare',
-            'qr-instagramcia': 'https://www.instagram.com/codeinsightacademy'
+            'qr-instagramcia': 'https://www.instagram.com/codeinsightacademy',
+            'qr-blog': 'https://codeinsightacademy.com/blog/'
         };
         Object.entries(qrLinks).forEach(([id, url]) => {
             new QRious({ element: document.getElementById(id), value: url, size: 100 });

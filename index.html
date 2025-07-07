@@ -246,7 +246,7 @@
         sections.forEach(section => {
             observer.observe(section);
         });
-
+/*
         // QR Code Generation
         new QRCode(document.getElementById("qr-linkedin"), {
             text: "https://linkedin.com/in/shaileshsonare",
@@ -282,6 +282,19 @@
             text: "https://www.instagram.com/shaileshsonare",
             width: 100,
             height: 100
+        });
+*/
+        const qrLinks = {
+          'qr-linkedin': 'https://linkedin.com/in/shaileshsonare',
+          'qr-github': 'https://github.com/shaileshsonareg',
+          'qr-youtube': 'https://www.youtube.com/@SHAILESHSONARE',
+          'qr-facebook': 'https://www.facebook.com/shaileshsonare',
+          'qr-instagram': 'https://www.instagram.com/shaileshsonare',
+          'qr-codeinsight': 'https://www.youtube.com/@CodeInsightAcademy',
+          'qr-ciadevlive': 'https://www.youtube.com/@ciadevlive'
+        };
+        Object.entries(qrLinks).forEach(([id, url]) => {
+          new QRious({ element: document.getElementById(id), value: url, size: 100 });
         });
     </script>
 </body>

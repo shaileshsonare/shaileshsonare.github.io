@@ -1,44 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shailesh Sonare - Portfolio</title>
+    <title>Shailesh Sonare - Full Stack Developer, Agile Mentor & Engineering Leader | Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Shailesh Sonare - Full Stack Developer with 12+ years experience in React, Go, DevOps, System Architecture. Certified Scrum Master, AWS Practitioner. Expert in mentoring, training, and engineering leadership.">
+    <meta name="keywords"
+        content="Shailesh Sonare, Full Stack Developer, React Developer, GoLang Developer, DevOps Engineer, Agile Mentor, Scrum Master, AWS, System Architecture, Engineering Leadership, Tech Trainer, Code Mentor, India">
+    <meta name="author" content="Shailesh Sonare">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://shaileshsonare.github.io/">
 
     <!-- Open Graph / Facebook / WhatsApp -->
-<meta property="og:title" content="Shailesh Sonare - Full Stack Developer & Mentor" />
-<meta property="og:description" content="Explore my portfolio to see my skills in React, Go, DevOps, System Architecture, and Engineering Leadership." />
-<meta property="og:image" content="https://shaileshsonare.github.io/og-image.jpg" />
-<meta property="og:url" content="https://shaileshsonare.github.io/" />
-<meta property="og:type" content="website" />
-    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shaileshsonare.github.io/">
+    <meta property="og:title" content="Shailesh Sonare - Full Stack Developer & Mentor">
+    <meta property="og:description"
+        content="Explore my portfolio to see my skills in React, Go, DevOps, System Architecture, and Engineering Leadership. 12+ years of experience, 5000+ students mentored.">
+    <meta property="og:image" content="https://shaileshsonare.github.io/og-image.jpg">
+    <meta property="og:site_name" content="Shailesh Sonare Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://shaileshsonare.github.io/">
+    <meta name="twitter:title" content="Shailesh Sonare - Full Stack Developer & Mentor">
+    <meta name="twitter:description"
+        content="Full Stack Developer with 12+ years experience. Expert in React, Go, DevOps. Certified Scrum Master & AWS Practitioner. Passionate mentor to 5000+ students.">
+    <meta name="twitter:image" content="https://shaileshsonare.github.io/og-image.jpg">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shailesh Sonare",
+      "url": "https://shaileshsonare.github.io",
+      "image": "https://shaileshsonare.github.io/og-image.jpg",
+      "jobTitle": "Full Stack Developer & Engineering Leader",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Netcore Cloud"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "HVPM COET Amravati"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "CDAC ACTS Pune"
+        }
+      ],
+      "knowsAbout": ["Full Stack Development", "React", "GoLang", "DevOps", "System Architecture", "Agile Methodology", "Scrum", "AWS", "Engineering Leadership", "Technical Training"],
+      "sameAs": [
+        "https://linkedin.com/in/shaileshsonare",
+        "https://github.com/shaileshsonareg",
+        "https://www.youtube.com/@SHAILESHSONARE",
+        "https://www.youtube.com/@CodeInsightAcademy",
+        "https://www.facebook.com/shaileshsonare",
+        "https://www.instagram.com/shaileshsonare",
+        "https://codeinsightacademy.com/blog/"
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <style>
-        /* Custom Parallax and Animations */
-        .parallax {
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
+        /* CSS Variables - Professional Corporate Theme */
+        :root {
+            --primary: #0066FF;
+            --primary-dark: #0052CC;
+            --primary-light: #3385FF;
+            --accent: #FF6B35;
+            --accent-light: #FF8C61;
+            --accent-dark: #E5511E;
+            --background: #0A0E27;
+            --surface: #151B3D;
+            --surface-light: #1F2747;
+            --surface-lighter: #2A3357;
+            --text: #FFFFFF;
+            --text-muted: #B8C5D6;
+            --text-dim: #8899AA;
+            --success: #00C48C;
+            --gradient-primary: linear-gradient(135deg, #0066FF 0%, #00B8D4 100%);
+            --gradient-accent: linear-gradient(135deg, #FF6B35 0%, #FFB800 100%);
+            --gradient-success: linear-gradient(135deg, #00C48C 0%, #00E5A0 100%);
         }
-        .parallax-hero {
-            background-image: url('https://images.unsplash.com/photo-1516321310765-79e5b9f9cd73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .section-slide-in {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease-out;
-        }
-        .section-slide-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Dynamic Background Animation */
+
         body {
-            position: relative;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--background);
+            color: var(--text);
             overflow-x: hidden;
+            position: relative;
         }
+
+        /* Animated Background - Professional */
         body::before {
             content: '';
             position: fixed;
@@ -46,12 +121,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #1e3a8a, #4c1d95, #7c3aed, #1e3a8a);
-            background-size: 600%;
-            opacity: 0.3;
+            background: linear-gradient(135deg, #0066FF 0%, #00B8D4 25%, #0066FF 50%, #003D99 100%);
+            background-size: 400% 400%;
+            opacity: 0.08;
             z-index: -2;
-            animation: gradientWave 20s ease infinite;
+            animation: gradientWave 25s ease infinite;
         }
+
         body::after {
             content: '';
             position: fixed;
@@ -59,257 +135,793 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10%);
-            background-size: 20px 20px;
-            opacity: 0.2;
+            background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.4;
             z-index: -1;
-            animation: particleShift 30s linear infinite;
+            animation: particleShift 50s linear infinite;
         }
+
         @keyframes gradientWave {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
+
         @keyframes particleShift {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-100px, -100px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-80px, -80px);
+            }
         }
-        /* Social Media Button Animation */
-        .social-link {
-            transition: transform 0.3s ease;
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(21, 27, 61, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(184, 197, 214, 0.1);
+        }
+
+        .glass-light {
+            background: rgba(31, 39, 71, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(184, 197, 214, 0.15);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 0.5rem;
+            position: relative;
+            padding: 2rem;
         }
-        .social-link:hover {
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--primary);
+            box-shadow: 0 0 50px rgba(0, 102, 255, 0.6), 0 25px 50px rgba(0, 0, 0, 0.4);
+            margin: 0 auto 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, #00B8D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.6rem);
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero .description {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Section animations */
+        .section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* About Section */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 4px solid var(--primary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 25px 70px rgba(0, 102, 255, 0.4);
+        }
+
+        /* Skills Cards */
+        .skill-card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 102, 255, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.25);
+            border-color: var(--primary);
+            background: var(--surface-light);
+        }
+
+        .skill-card h3 {
+            color: var(--primary-light);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .skill-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Teaching Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 16/10;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(0, 102, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
             transform: scale(1.1);
         }
-        /* QR Code and Icon Styling */
-        .qr-code {
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay p {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card:nth-child(2) {
+            background: var(--gradient-accent);
+        }
+
+        .stat-card:nth-child(3) {
+            background: var(--gradient-success);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-top: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--gradient-primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.65rem;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid var(--background);
+            box-shadow: 0 0 0 5px rgba(0, 102, 255, 0.25);
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            padding: 1.75rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.25);
+            background: var(--surface-light);
+        }
+
+        /* QR Code Section */
+        .qr-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
+            gap: 2.5rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-        .qr-code div {
+
+        .qr-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            min-width: 120px;
+            min-width: 130px;
+            transition: transform 0.3s ease;
         }
-        .qr-code canvas {
-            border: 5px solid #ffffff;
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
+
+        .qr-item:hover {
+            transform: scale(1.1);
         }
-        .qr-code i {
-            font-size: 1.5rem;
-            color: #4f46e5;
-            margin-bottom: 0.5rem;
+
+        .qr-item canvas {
+            border: 5px solid rgba(0, 102, 255, 0.3);
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: border-color 0.3s ease;
         }
-        .qr-code p {
-            font-size: 0.9rem;
-            color: #d1d5db;
+
+        .qr-item:hover canvas {
+            border-color: var(--primary);
         }
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+
+        .qr-item i {
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .qr-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .py-20 {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .bg-dark {
+            background: var(--background);
+        }
+
+        .bg-surface {
+            background: var(--surface);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-image {
+                margin: 0 auto;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
-    <!-- Hero Section with Parallax -->
-    <header class="parallax parallax-hero h-screen flex items-center justify-center">
-        <div class="text-center bg-black bg-opacity-50 p-10 rounded-lg">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">Shailesh Sonare</h1>
-            <p class="text-xl md:text-2xl mb-6">Full Stack Developer · Agile Mentor · Content Creator · Life Coach · Vibe Coder</p>
-            <p class="text-lg md:text-xl text-gray-300">
-              Breaking down complex concepts through analogies, building with agility, and coding for a better tomorrow.
+
+<body>
+    <!-- Hero Section -->
+    <header class="hero" role="banner">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <img src="images/profile.jpg" alt="Shailesh Sonare - Full Stack Developer and Engineering Leader"
+                class="profile-image">
+            <h1>Shailesh Sonare</h1>
+            <p class="subtitle">Full Stack Developer · Agile Mentor · Content Creator · Life Coach · Vibe Coder</p>
+            <p class="description">
+                Breaking down complex concepts through analogies, building with agility, and coding for a better
+                tomorrow.
             </p>
         </div>
     </header>
 
     <!-- About Me -->
-    <section id="about" class="py-20 bg-gray-800 section-slide-in">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
-            <p class="text-lg max-w-3xl mx-auto text-gray-300">
-                I am a certified Project Manager and Full Stack Developer with 12+ years of experience in backend systems, frontend development, and DevOps. I lead engineering teams and have a strong track record in delivering SaaS platforms, automating infrastructure, and scaling solutions. My strengths include system architecture, clean code, agile planning, and mentoring engineers.
+    <section id="about" class="py-20 bg-surface section" aria-labelledby="about-heading">
+        <div class="container">
+            <h2 id="about-heading" class="section-title">About Me</h2>
+            <p class="section-subtitle">Transforming ideas into scalable solutions with clean code and agile practices
             </p>
+            <div class="about-container">
+                <img src="images/profile.jpg" alt="Shailesh Sonare professional photo" class="about-image">
+                <div>
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-muted);">
+                        I am a certified Project Manager and Full Stack Developer with 12+ years of experience in
+                        backend systems, frontend development, and DevOps. I lead engineering teams and have a strong
+                        track record in delivering SaaS platforms, automating infrastructure, and scaling solutions. My
+                        strengths include system architecture, clean code, agile planning, and mentoring engineers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentoring & Teaching -->
+    <section id="teaching" class="py-20 bg-dark section" aria-labelledby="teaching-heading">
+        <div class="container">
+            <h2 id="teaching-heading" class="section-title">Mentoring & Teaching</h2>
+            <p class="section-subtitle">
+                Passionate about sharing knowledge and empowering the next generation of developers through workshops,
+                sessions, and hands-on training.
+            </p>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Years Teaching</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Students Impacted</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Sessions Conducted</div>
+                </div>
+            </div>
+
+            <div class="gallery-grid" style="margin-top: 3rem;">
+                <div class="gallery-item">
+                    <img src="images/teaching-gallery-1.jpg" alt="Shailesh Sonare presenting at technology conference"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Presenting at Tech Conference</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/teaching-gallery-2.jpg"
+                        alt="Full classroom attending Shailesh Sonare's training session" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Full House Classroom Training</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/teaching-gallery-3.jpg" alt="Interactive learning session led by Shailesh Sonare"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Interactive Learning Session</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/teaching-gallery-4.jpg" alt="Hands-on workshop conducted by Shailesh Sonare"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Hands-on Workshop</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/teaching-gallery-5.jpg"
+                        alt="Shailesh Sonare engaging with students during training" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Engaging with Students</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/teaching-gallery-6.jpg"
+                        alt="Large audience attending Shailesh Sonare's technical training" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Large Audience Training</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Skills & Technologies -->
-    <section id="skills" class="py-20 bg-gray-900 section-slide-in">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-8 text-center">Skills & Technologies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Languages</h3>
-                    <p class="text-gray-300">Java, PHP, JavaScript, GoLang, Shell, Python</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Frameworks</h3>
-                    <p class="text-gray-300">React, Node.js, Spring Boot, Express</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Databases</h3>
-                    <p class="text-gray-300">MySQL, Redis, ClickHouse, MongoDB, Elasticsearch</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Cloud & DevOps</h3>
-                    <p class="text-gray-300">AWS, Jenkins, Docker, GitHub, Nginx, Kafka</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Tools</h3>
-                    <p class="text-gray-300">Git, Jira, Postman, VS Code, Linux</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Architecture & Patterns</h3>
-                    <p class="text-gray-300">
-                        Microservices, RESTful APIs, Monolithic Architecture, Modular Design, API-First Approach
-                    </p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Design Principles</h3>
-                    <p class="text-gray-300 space-x-2">
-                        <span title="Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion">SOLID</span>,
-                        <span title="Don't Repeat Yourself">DRY</span>,
-                        <span title="Keep It Simple, Stupid">KISS</span>,
-                        <span title="You Aren’t Gonna Need It">YAGNI</span>,
-                        <span title="Separation of Concerns">SoC</span>
-                    </p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                  <h3 class="text-xl font-semibold mb-4">Testing & QA</h3>
-                  <p class="text-gray-300">
-                    Postman, Jest, JUnit, Manual Testing, Functional Testing, Integration Testing
-                  </p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                  <h3 class="text-xl font-semibold mb-4">Project & Team Practices</h3>
-                  <p class="text-gray-300">
-                    Agile, Scrum, Sprint Planning, Code Reviews, Mentoring, Documentation, Knowledge Sharing
-                  </p>
-                </div>
+    <section id="skills" class="py-20 bg-surface section" aria-labelledby="skills-heading">
+        <div class="container">
+            <h2 id="skills-heading" class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">Expertise across the full technology stack with modern tools and frameworks</p>
+            <div class="grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <article class="skill-card">
+                    <h3>💻 Languages</h3>
+                    <p>Java, PHP, JavaScript, GoLang, Shell, Python</p>
+                </article>
+                <article class="skill-card">
+                    <h3>⚡ Frameworks</h3>
+                    <p>React, Node.js, Spring Boot, Express</p>
+                </article>
+                <article class="skill-card">
+                    <h3>🗄️ Databases</h3>
+                    <p>MySQL, Redis, ClickHouse, MongoDB, Elasticsearch</p>
+                </article>
+                <article class="skill-card">
+                    <h3>☁️ Cloud & DevOps</h3>
+                    <p>AWS, Jenkins, Docker, GitHub, Nginx, Kafka</p>
+                </article>
+                <article class="skill-card">
+                    <h3>🛠️ Tools</h3>
+                    <p>Git, Jira, Postman, VS Code, Linux</p>
+                </article>
+                <article class="skill-card">
+                    <h3>🏗️ Architecture & Patterns</h3>
+                    <p>Microservices, RESTful APIs, Monolithic Architecture, Modular Design, API-First Approach</p>
+                </article>
+                <article class="skill-card">
+                    <h3>📐 Design Principles</h3>
+                    <p>SOLID, DRY, KISS, YAGNI, SoC</p>
+                </article>
+                <article class="skill-card">
+                    <h3>🧪 Testing & QA</h3>
+                    <p>Postman, Jest, JUnit, Manual Testing, Functional Testing, Integration Testing</p>
+                </article>
+                <article class="skill-card">
+                    <h3>👥 Project & Team Practices</h3>
+                    <p>Agile, Scrum, Sprint Planning, Code Reviews, Mentoring, Documentation, Knowledge Sharing</p>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Education & Certifications -->
-    <section id="education" class="py-20 bg-gray-800 section-slide-in">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-8 text-center">Education & Certifications</h2>
-            <ul class="list-disc list-inside max-w-3xl mx-auto text-lg text-gray-300">
-                <li>B.E. in Information Technology – HVPM COET Amravati, 2006–2010</li>
-                <li>Post Graduate Diploma in Advanced Computing – CDAC ACTS Pune, 2012–2013</li>
-                <li>Certified Scrum Master – Scrum Alliance</li>
-                <li>AWS Practitioner Certification – Amazon Web Services</li>
-            </ul>
+    <section id="education" class="py-20 bg-dark section" aria-labelledby="education-heading">
+        <div class="container">
+            <h2 id="education-heading" class="section-title">Education & Certifications</h2>
+            <p class="section-subtitle">Academic foundation and professional certifications</p>
+            <div class="glass" style="max-width: 800px; margin: 0 auto; padding: 2.5rem; border-radius: 20px;">
+                <ul style="list-style: none;">
+                    <li
+                        style="padding: 1.25rem; border-left: 4px solid var(--primary); padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                        <strong style="color: var(--primary-light); font-size: 1.25rem;">B.E. in Information
+                            Technology</strong>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1rem;">HVPM COET Amravati,
+                            2006–2010</p>
+                    </li>
+                    <li
+                        style="padding: 1.25rem; border-left: 4px solid var(--primary); padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                        <strong style="color: var(--primary-light); font-size: 1.25rem;">Post Graduate Diploma in
+                            Advanced Computing</strong>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1rem;">CDAC ACTS Pune,
+                            2012–2013</p>
+                    </li>
+                    <li
+                        style="padding: 1.25rem; border-left: 4px solid var(--accent); padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                        <strong style="color: var(--accent-light); font-size: 1.25rem;">Certified Scrum Master</strong>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1rem;">Scrum Alliance</p>
+                    </li>
+                    <li style="padding: 1.25rem; border-left: 4px solid var(--accent); padding-left: 1.5rem;">
+                        <strong style="color: var(--accent-light); font-size: 1.25rem;">AWS Practitioner
+                            Certification</strong>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 1rem;">Amazon Web Services
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="py-20 bg-gray-900 section-slide-in">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-8 text-center">Experience</h2>
-            <div class="space-y-8 max-w-3xl mx-auto">
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold">Netcore Cloud</h3>
-                    <p class="text-gray-400">Mar 2019 – Present</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-300">
-                        <li>Led Agile teams and delivered SaaS platforms with CI/CD automation</li>
-                        <li>Improved deployment cycles by 40%</li>
-                        <li>Oversaw infrastructure migration and DevOps transformations</li>
-                    </ul>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold">Axis Bank (via Mphasis)</h3>
-                    <p class="text-gray-400">2018 – 2019</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold">Saint Gobain, Mumbai</h3>
-                    <p class="text-gray-400">2016 – 2018</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold">Hidden Brains</h3>
-                    <p class="text-gray-400">2013 – 2015</p>
-                </div>
+    <section id="experience" class="py-20 bg-surface section" aria-labelledby="experience-heading">
+        <div class="container">
+            <h2 id="experience-heading" class="section-title">Experience</h2>
+            <p class="section-subtitle">Career journey across leading organizations</p>
+            <div class="timeline" style="max-width: 800px; margin: 0 auto;">
+                <article class="timeline-item">
+                    <div class="timeline-content">
+                        <h3
+                            style="font-size: 1.5rem; font-weight: 700; color: var(--primary-light); margin-bottom: 0.5rem;">
+                            Netcore Cloud</h3>
+                        <p style="color: var(--accent-light); margin-bottom: 1rem; font-weight: 600;">Mar 2019 – Present
+                        </p>
+                        <ul style="list-style-position: inside; color: var(--text-muted); line-height: 1.9;">
+                            <li>Led Agile teams and delivered SaaS platforms with CI/CD automation</li>
+                            <li>Improved deployment cycles by 40%</li>
+                            <li>Oversaw infrastructure migration and DevOps transformations</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-content">
+                        <h3
+                            style="font-size: 1.5rem; font-weight: 700; color: var(--primary-light); margin-bottom: 0.5rem;">
+                            Axis Bank (via Mphasis)</h3>
+                        <p style="color: var(--accent-light); font-weight: 600;">2018 – 2019</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-content">
+                        <h3
+                            style="font-size: 1.5rem; font-weight: 700; color: var(--primary-light); margin-bottom: 0.5rem;">
+                            Saint Gobain, Mumbai</h3>
+                        <p style="color: var(--accent-light); font-weight: 600;">2016 – 2018</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-content">
+                        <h3
+                            style="font-size: 1.5rem; font-weight: 700; color: var(--primary-light); margin-bottom: 0.5rem;">
+                            Hidden Brains</h3>
+                        <p style="color: var(--accent-light); font-weight: 600;">2013 – 2015</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Connect -->
-    <section id="connect" class="py-20 bg-gray-800 section-slide-in">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-8 text-center">Connect with Me</h2>
-            <div class="qr-code">
-                <div>
-                    <a href="https://linkedin.com/in/shaileshsonare" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin text-2xl text-indigo-600"></i>
-                        <canvas id="qr-linkedin"></canvas>
-                        <p class="text-gray-300">LinkedIn</p>
+    <section id="connect" class="py-20 bg-dark section" aria-labelledby="connect-heading">
+        <div class="container">
+            <h2 id="connect-heading" class="section-title">Connect with Me</h2>
+            <p class="section-subtitle">Let's collaborate on your next project or training program</p>
+            <div class="qr-grid">
+                <div class="qr-item">
+                    <a href="https://linkedin.com/in/shaileshsonare" target="_blank" rel="noopener noreferrer"
+                        aria-label="Connect with Shailesh Sonare on LinkedIn"
+                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <canvas id="qr-linkedin" role="img" aria-label="QR code for LinkedIn profile"></canvas>
+                        <p>LinkedIn</p>
                     </a>
                 </div>
-                <div>
-                    <a href="https://github.com/shaileshsonareg" target="_blank" class="social-link">
-                        <i class="fab fa-github text-2xl text-indigo-600"></i>
-                        <canvas id="qr-github"></canvas>
-                        <p class="text-gray-300">GitHub</p>
+                <div class="qr-item">
+                    <a href="https://github.com/shaileshsonareg" target="_blank" rel="noopener noreferrer"
+                        aria-label="View Shailesh Sonare's GitHub repositories"
+                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <canvas id="qr-github" role="img" aria-label="QR code for GitHub profile"></canvas>
+                        <p>GitHub</p>
                     </a>
                 </div>
-                <div>
-                    <a href="https://www.youtube.com/@SHAILESHSONARE" target="_blank" class="social-link">
-                        <i class="fab fa-youtube text-2xl text-indigo-600"></i>
-                        <canvas id="qr-youtube"></canvas>
-                        <p class="text-gray-300">YouTube (Personal)</p>
+                <div class="qr-item">
+                    <a href="https://www.youtube.com/@SHAILESHSONARE" target="_blank" rel="noopener noreferrer"
+                        aria-label="Subscribe to Shailesh Sonare's personal YouTube channel"
+                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                        <canvas id="qr-youtube" role="img" aria-label="QR code for personal YouTube channel"></canvas>
+                        <p>YouTube (Personal)</p>
                     </a>
                 </div>
-                <div>
-                    <a href="https://www.youtube.com/@CodeInsightAcademy" target="_blank" class="social-link">
-                        <i class="fab fa-youtube text-2xl text-indigo-600"></i>
-                        <canvas id="qr-codeinsight"></canvas>
-                        <p class="text-gray-300">CodeInsightAcademy <br />(Tech Tutorials)</p>
+                <div class="qr-item">
+                    <a href="https://www.youtube.com/@CodeInsightAcademy" target="_blank" rel="noopener noreferrer"
+                        aria-label="Subscribe to CodeInsight Academy YouTube channel"
+                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                        <canvas id="qr-codeinsight" role="img" aria-label="QR code for CodeInsight Academy"></canvas>
+                        <p>CodeInsightAcademy</p>
                     </a>
                 </div>
-                <div>
-                    <a href="https://www.youtube.com/@ciadevlive" target="_blank" class="social-link">
-                        <i class="fab fa-youtube text-2xl text-indigo-600"></i>
-                        <canvas id="qr-ciadevlive"></canvas>
-                        <p class="text-gray-300">CIA Dev Live <br />(Live Stream)</p>
+                <div class="qr-item">
+                    <a href="https://www.youtube.com/@ciadevlive" target="_blank" rel="noopener noreferrer"
+                        aria-label="Subscribe to CIA Dev Live YouTube channel"
+                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                        <canvas id="qr-ciadevlive" role="img" aria-label="QR code for CIA Dev Live"></canvas>
+                        <p>CIA Dev Live</p>
                     </a>
                 </div>
-                <div>
-                    <a href="https://www.facebook.com/shaileshsonare" target="_blank" class="social-link">
-                        <i class="fab fa-facebook text-2xl text-indigo-600"></i>
-                        <canvas id="qr-facebook"></canvas>
-                        <p class="text-gray-300">Facebook</p>
+                <div class="qr-item">
+                    <a href="https://www.facebook.com/shaileshsonare" target="_blank" rel="noopener noreferrer"
+                        aria-label="Follow Shailesh Sonare on Facebook"
+                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                        <canvas id="qr-facebook" role="img" aria-label="QR code for Facebook profile"></canvas>
+                        <p>Facebook</p>
                     </a>
                 </div>
-                <div>
-                    <a href="https://www.instagram.com/shaileshsonare" target="_blank" class="social-link">
-                        <i class="fab fa-instagram text-2xl text-indigo-600"></i>
-                        <canvas id="qr-instagram"></canvas>
-                        <p class="text-gray-300">Instagram <br />(Personal)</p>
+                <div class="qr-item">
+                    <a href="https://www.instagram.com/shaileshsonare" target="_blank" rel="noopener noreferrer"
+                        aria-label="Follow Shailesh Sonare on Instagram"
+                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                        <canvas id="qr-instagram" role="img" aria-label="QR code for personal Instagram"></canvas>
+                        <p>Instagram (Personal)</p>
                     </a>
                 </div>
-                <div>
-                    <a href="https://www.instagram.com/shaileshsonare" target="_blank" class="social-link">
-                        <i class="fab fa-instagram text-2xl text-indigo-600"></i>
-                        <canvas id="qr-instagramcia"></canvas>
-                        <p class="text-gray-300">Instagram CIA</p>
+                <div class="qr-item">
+                    <a href="https://www.instagram.com/codeinsightacademy" target="_blank" rel="noopener noreferrer"
+                        aria-label="Follow CodeInsight Academy on Instagram"
+                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                        <canvas id="qr-instagramcia" role="img"
+                            aria-label="QR code for CodeInsight Academy Instagram"></canvas>
+                        <p>Instagram CIA</p>
                     </a>
                 </div>
-                <div>
-                    <a href="https://codeinsightacademy.com/blog/" target="_blank" class="social-link">
-                        <i class="fas fa-blog text-2xl text-indigo-600"></i>
-                        <canvas id="qr-blog"></canvas>
-                        <p class="text-gray-300">Tech Blog</p>
+                <div class="qr-item">
+                    <a href="https://codeinsightacademy.com/blog/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Read Shailesh Sonare's technical blog"
+                        style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+                        <i class="fas fa-blog" aria-hidden="true"></i>
+                        <canvas id="qr-blog" role="img" aria-label="QR code for Tech Blog"></canvas>
+                        <p>Tech Blog</p>
                     </a>
                 </div>
             </div>
@@ -317,28 +929,27 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-6 bg-gray-900 text-center">
-        <p class="text-gray-400">© 2025 Shailesh Sonare. Built with passion and clean code.</p>
+    <footer
+        style="padding: 2.5rem; background: var(--background); text-align: center; border-top: 1px solid rgba(0, 102, 255, 0.15);"
+        role="contentinfo">
+        <p style="color: var(--text-dim);">© <span id="year"></span> Shailesh Sonare. Built with passion and clean code.
+        </p>
     </footer>
 
-    <!-- JavaScript for Parallax, Scroll Animations, and QR Codes -->
+    <!-- JavaScript -->
     <script>
-        // Parallax Effect
-        window.addEventListener('scroll', () => {
-            const parallax = document.querySelector('.parallax');
-            let scrollPosition = window.pageYOffset;
-            parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
-        });
+        // Set dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
 
         // Scroll Animation for Sections
-        const sections = document.querySelectorAll('.section-slide-in');
+        const sections = document.querySelectorAll('.section');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0.15 });
 
         sections.forEach(section => {
             observer.observe(section);
@@ -356,9 +967,11 @@
             'qr-instagramcia': 'https://www.instagram.com/codeinsightacademy',
             'qr-blog': 'https://codeinsightacademy.com/blog/'
         };
+
         Object.entries(qrLinks).forEach(([id, url]) => {
             new QRious({ element: document.getElementById(id), value: url, size: 100 });
         });
     </script>
 </body>
+
 </html>
